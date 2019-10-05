@@ -7,6 +7,17 @@ body {
     margin-right: 20%;
 }
 
+a {
+    text-decoration:none;
+    color:#FDFD96;
+}
+
+li {
+    font-size: 1em;
+    font-weight: 550;
+    text-align: left;
+}
+
 h1 {
     text-align:center;
     color:white;
@@ -67,7 +78,7 @@ p {
 @keyframes slidein {
     from {
         margin-left: 100%;
-        width: 300%; 
+        width: 100%; 
       }
     
       to {

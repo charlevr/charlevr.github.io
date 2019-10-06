@@ -22,4 +22,13 @@ for (var i = 0; i < buttons.length; i++)
         }
     );
     
+    buttons[i].addEventListener(
+        "click",
+        function() {
+            var currentbtn = document.getElementsByClassName("btn-active");
+            currentbtn[0].className = currentbtn[0].className.replace(" btn-active", "");
+
+            this.className += " btn-active";
+        }
+    )
 }

@@ -3,6 +3,7 @@ Sources:
 https://www.w3schools.com/howto/howto_js_active_element.asp
 https://www.w3schools.com/css/css_display_visibility.asp
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+http://thenewcode.com/630/Fade-In-Elements-Sequentially-with-CSS
 */
 
 var btnContainer = document.getElementById("btns");

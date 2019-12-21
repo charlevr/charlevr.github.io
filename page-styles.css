@@ -53,6 +53,27 @@ h1:hover {
     transition: .5s;
 }
 
+.resume {
+    background:none;
+    border:none;
+    color:black;
+    outline:none;
+    font-size: 20px;
+    padding: 0;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+
+    transition: .5s;
+}
+
+.resume:hover {
+    color:#FCF7DE;
+    filter: brightness(70%)
+}
+
 .btn-active {
     color:#FCF7DE;
     filter: brightness(70%);
@@ -75,19 +96,37 @@ p {
 }
 
 .active {
-    animation: .6s slidein;
+    animation: 1s fdsseq;
 }
 
-@keyframes slidein {
-    from {
-        margin-left: 100%;
-        width: 100%; 
-      }
-    
-      to {
-        margin-left: 0%;
-        width: 100%;
-      }
+
+/*https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load*/
+@keyframes fdsseq   {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fdsseq  {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fdsseq  {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fdsseq  {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fdsseq  {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .hide {

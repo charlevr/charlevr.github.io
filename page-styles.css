@@ -1,0 +1,98 @@
+body {
+    background-color: #202020;
+    font-family: DMSans, sans-serif;
+    color:white;
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+li {
+    font-size: 1em;
+    font-weight: 550;
+    text-align: left;
+}
+
+h1 {
+    text-align:center;
+    color:white;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+
+    transition: .5s;
+}
+
+nav {
+    text-align: center;
+    position: relative;
+}
+
+h1:hover {
+    color: #769ECB;
+    filter: brightness(85%)
+}
+
+/* https://stackoverflow.com/questions/6008324/fade-effect-on-link-hover */
+.btn {
+    background:none;
+    border:none;
+    color:white;
+    outline:none;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+
+    transition: .5s;
+}
+
+.btn-active {
+    color:#FCF7DE;
+    filter: brightness(70%);
+}
+
+.btn:hover {
+    color:#FCF7DE;
+    filter: brightness(70%)
+}
+
+p {
+    display:block;
+    font-size: 1em;
+    font-weight: 550;
+    text-align: start;
+}
+
+.page {
+    color:white
+}
+
+.active {
+    animation: .6s slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%; 
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+}
+
+.hide {
+    display:none;
+}
+

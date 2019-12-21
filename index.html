@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Charles De Vera</title>
+    <meta name="description" content="Chad's Personal Website" />
+    <meta name="author" content="Charles De Vera" />
+    <link rel="stylesheet" href="page-styles.css" />
+  </head>
+
+  <body>
+    <h1>Charles De Vera</h1>
+    <nav>
+      <div id="btns">
+        <button class="btn btn-active">
+          <h2>About Me</h2>
+        </button>
+
+        <button class="btn">
+          <h2>Personal and School Projects</h2>
+        </button>
+
+        <button class="btn">
+          <h2>Undergraduate Research</h2>
+        </button>
+
+        <button class="btn">
+          <h2>Web Development</h2>
+        </button>
+      </div>
+    </nav>
+
+    <div id="About Me" class="page active">
+      <p>
+        Hello! My name is Charles and I am currently a 4th year computer science student
+        at University of California, Irvine. In terms on coding, I am interested in backend
+        or front end development as well machine learning. My goal is to go into software
+        engineering and eventually get a Masters or PhD studying applications of machine learning.
+        That being said, here are the languages I can code in:
+        <ul>
+          <li>Python</li>
+          <li>C and C++</li>
+          <li>HTML/CSS/Javascript (Yes, HTML and CSS are not "languages" though.)</li>
+          <li>Java</li>
+          <li>Julia</li>
+        </ul>
+      </p>
+      <p>
+        For my personal projects and school projects I also use a variety of technologies.
+        Here are the technologies that I use often and am comfortable with:
+        <ul>
+          <li>MySQL/SQL</li>
+          <li>Jupyter Notebook</li>
+          <li>Docker</li>
+          <li>Ubuntu and Windows</li>
+          <li>Git</li>
+        </ul>
+      </p>
+      <p>
+        And finally, since I am interested in machine learning, naturally I use a variety
+        of python libraries to aid in building models and analyzing data. There are a lot of 
+        natural language processing libraries I am familiar with since that is the main focus
+        of my undergraduate research. Here they are:
+        <ul>
+          <li>ntlk (tokenization)</li>
+          <li>pandas (data cleaning and manipulation)</li>
+          <li>numpy/scipy (vector manipulation and general math functions)</li>
+          <li>scikit-learn (non-deep learning models)</li>
+          <li>spaCy and fasttext (sentential embeddings and NLP pipelines</li>
+          <li>PyTorch (deep learning models such as LSTM and RNN)</li>
+        </ul>
+      </p>
+      <p>
+        When I get frustrated with coding, I like to play and watch basketball, watch 
+        <a target="_blank" href="https://myanimelist.net/animelist/TheMuffinMang123"
+        style="color:#FDFD96">anime</a>, playing video games like Super Smash Bros and League of Legends,
+        <a target="_blank" href="https://open.spotify.com/user/1217905829?si=TROR0WKVRz6RaokrZ9pVWA"
+        style="color:#FDFD96">
+        listening to *any* music</a>, and drink water. Feel free to poke around
+        the website and check out the projects that I have done!
+      </p>
+    </div>
+
+    <div id="Personal and School Projects" class="page hide">
+      <p>
+        <a href="https://github.com/charlevr/sudoku_solver" target="_blank" style="color:#ff6961">
+          A Sudoku Solver in C++ (Link to Github)
+        </a>
+      </p>
+      <p>
+        This is a project that I made on my own that applies some very basic principles 
+        of artificial intelligence. First, the program takes a 9x9 grid of the sudoku 
+        puzzle that you are trying to solve as a text file. Blanks are represented as dots and the given numbers 
+        are placed in the coordinates where they would be found in the input puzzle. The input
+        is given at the command line and once validated, the algorithm first eliminates numbers
+        which do not align with the given numbers. For example, a 5 in a row that already has
+        5 given will not be considered. This lowers the number of computations needed by a good
+        amount. After these obvious wrong answers are eliminated from consideration, 
+        the the program performs a standard backtracking algorithm to solve out the rest 
+        of the sudoku puzzle. It takes a guess, checks if its right, and continues or 
+        backtracks based on if it's right or wrong. Since obvious wrong answers are taken out,
+        the backtracking goes slightly faster. The completed board is then printed on the console. 
+      </p>
+
+      <p>
+        <a target="_blank" style="color:#779ecb">
+          A Basic Search Engine in Python
+        </a>
+      </p>
+
+      <p>
+        I worked with a partner to make a simple search engine that searched UCI's School of
+        ICS webpages. This was for our our information retrieval class (so no link in case someone
+        wants to take our code). Essentially, we created a reverse index of webpages and stored them
+        in an SQLite database. Each row was a page URL and each column was a word in the vocabulary
+        of the set of ICS webpages. Each column recorded the tf-idf of that word in the document.
+        Thus, each row can be thought of as a vector that represents the document. When a user
+        creates a search query, we would simply use the cosine similarity method and return
+        the results with the lowest angle distance from the query. <br><br>
+        Now that I know so much more natural language processing techniques, I realize that 
+        we could have used language models like GloVe or BERT to model the documents  and 
+        potentially make the search more accurate. Regardless, there is a speed problem with 
+        the search with could be fixed by eliminating results and making possible matches
+        more obvious. 
+      </p>
+    </div>
+
+    <div id="Undergraduate Research" class="page hide">
+      <p>
+        <a href="https://www.socsci.uci.edu/~lpearl/CoLaLab/people.html" target="_blank" style="color:#b19cd9">
+          Computation of Language Lab (CoLaLab)
+        </a>
+      </p>
+      <p>
+        I am currently working with Dr. Lisa Pearl with the help of Dr. Richard Futrell on a project
+        where we try to detect if a document is an imitation. For example, suppose we have a document X
+        written by author A. If we are given a document Y which some author B wrote that imitates
+        the style of author A, we try to detect that document Y is an imitation and not written by
+        author A. <br>
+        We use a variety of NLP techniques to accomplish this task and the quality
+        of each method is captured using precision, recall, and accuracy. We are also
+        using a dataset provided by Dr. Pearl's former student although we are in the
+        process of getting more data from Amazon MTurk. Thus, the results are based
+        on very little data. Without going into too much detail, here are some of the
+        approaches we have used (click the colored text for code):
+        <ul>
+          <li>
+            <span style="color:#77dd77">
+              <a target="_blank" href="https://colab.research.google.com/drive/1LQLDPKLcjxbdTbtbrMVG9dbfe-5IRkjN">
+                SVM With Sentential Embeddings:
+              </a>
+            </span>
+            Here, we use spaCy to access a word's sentential embedding. For the features,
+            we combined the mean embedding vector of the original document, the mean
+            embedding vector of the target document, and the the difference between these vectors. 
+            This creates a 900-dimension feature
+            vector which we use an SVM to classify "real" documents and "fake" documents. 
+          </li>
+          <li>
+            <span style="color:#81B1B1">
+              <a target="_blank" href="https://colab.research.google.com/drive/1YiTnpx5ATSxiTv1IV27ATJaSE0rwkOZG">
+                SpaCy's textcat Pipeline With BERT:
+              </a>
+            </span>
+          Now, we use spaCy's own pipeline with our data. It is modified with the use of 
+          the BERT language model. The info can be found
+          <a href="https://explosion.ai/blog/spacy-pytorch-transformers">here</a> on spaCy's 
+          website. 
+          </li>
+          <li>
+            <span style="color:#ffb347">
+              <a target="_blank" href="https://colab.research.google.com/drive/1cIVDw6R2_7m9sIwYQC46Cna7rB7BV4JM">
+                PyTorch LSTM With Sentential Embeddings:
+              </a>
+            </span>
+            This was one of the more interesting approches as we used the same features
+            as in the first bullet point, but we did not include the target document vector. 
+            Here, we abuse the LSTM as it can tell the difference between each vector. I learned
+            to implement this in PyTorch and it gave the most promising results. However,
+            we need to wait on more data to be completely sure. 
+          </li>
+        </ul>
+      </p>
+    </div>
+
+    <div id="Web Development" class="page hide">
+      <p>
+        Under construction!
+      </p>
+    </div>
+  </body>
+</html>
+
+<script src="page-functions.js"></script>

@@ -1,10 +1,10 @@
 body {
-    background-color: #202020;
-    font-family: DMSans, sans-serif;
-    color:white;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    color:black;
     text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 5%;
+    margin-right: 45%;
 }
 
 a {
@@ -19,8 +19,9 @@ li {
 }
 
 h1 {
-    text-align:center;
-    color:white;
+    text-align:left;
+    color:black;
+    font-weight:normal; 
 
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -28,11 +29,6 @@ h1 {
     -webkit-transition:.5s;
 
     transition: .5s;
-}
-
-nav {
-    text-align: center;
-    position: relative;
 }
 
 h1:hover {
@@ -44,8 +40,10 @@ h1:hover {
 .btn {
     background:none;
     border:none;
-    color:white;
+    color:black;
     outline:none;
+    font-size: 20px;
+    padding: 0;
 
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -73,7 +71,7 @@ p {
 }
 
 .page {
-    color:white
+    color:black;
 }
 
 .active {

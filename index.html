@@ -9,6 +9,7 @@
   <meta name="author" content="Charles De Vera" />
   <link rel="stylesheet" href="page-styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -30,8 +31,7 @@
       web dev+design
     </button>
     &nbsp|&nbsp
-    <a target="_blank" class="resume"
-    href="charles_dec_current_tech.pdf">
+    <a target="_blank" class="resume" href="charles_dec_current_tech.pdf">
       resume
     </a>
 
@@ -59,46 +59,42 @@
   </div>
 
   <div id="personal projects" class="page hide">
+    <p style="color:#ff6961">
+      a sudoku solver
+    </p>
+    <p>
+      <i>c++, vim, command line</i>
+    </p>
+
+    <p>
+      This is a simple sudoku solver done in the command line; all coding was done
+      by me and the puzzle is solved using backtracking search with forward checking
+      for slightly faster results.
+    </p>
     <p>
       <a href="https://github.com/charlevr/sudoku_solver" target="_blank" style="color:#ff6961">
-        A Sudoku Solver in C++ (Link to Github)
+        github
       </a>
     </p>
-    <p>
-      This is a project that I made on my own that applies some very basic principles
-      of artificial intelligence. First, the program takes a 9x9 grid of the sudoku
-      puzzle that you are trying to solve as a text file. Blanks are represented as dots and the given numbers
-      are placed in the coordinates where they would be found in the input puzzle. The input
-      is given at the command line and once validated, the algorithm first eliminates numbers
-      which do not align with the given numbers. For example, a 5 in a row that already has
-      5 given will not be considered. This lowers the number of computations needed by a good
-      amount. After these obvious wrong answers are eliminated from consideration,
-      the the program performs a standard backtracking algorithm to solve out the rest
-      of the sudoku puzzle. It takes a guess, checks if its right, and continues or
-      backtracks based on if it's right or wrong. Since obvious wrong answers are taken out,
-      the backtracking goes slightly faster. The completed board is then printed on the console.
-    </p>
-
+    <hr>
     <p>
       <a target="_blank" style="color:#779ecb">
-        A Basic Search Engine in Python
+        a basic search engine
       </a>
     </p>
-
     <p>
-      I worked with a partner to make a simple search engine that searched UCI's School of
-      ICS webpages. This was for our our information retrieval class (so no link in case someone
-      wants to take our code). Essentially, we created a reverse index of webpages and stored them
-      in an SQLite database. Each row was a page URL and each column was a word in the vocabulary
-      of the set of ICS webpages. Each column recorded the tf-idf of that word in the document.
-      Thus, each row can be thought of as a vector that represents the document. When a user
-      creates a search query, we would simply use the cosine similarity method and return
-      the results with the lowest angle distance from the query. <br><br>
-      Now that I know so much more natural language processing techniques, I realize that
-      we could have used language models like GloVe or BERT to model the documents and
-      potentially make the search more accurate. Regardless, there is a speed problem with
-      the search with could be fixed by eliminating results and making possible matches
-      more obvious.
+      <i>python, sqlite, beautifulsoup, spacetime-crawler, tkinter</i>
+    </p>
+    <p>
+      This is a simple search engine that I worked on with a partner that searches
+      webpages in UCI's ics domain. We used tdf-idf along with cosine similarity to rank
+      the webpages according to the search query. Pages were stored and retrieved
+      in an sqlite database.
+    </p>
+    <p>
+      <a target="_blank" style="color:#779ecb">
+        no github repo - school project
+      </a>
     </p>
   </div>
 
@@ -109,6 +105,10 @@
       </a>
     </p>
     <p>
+      <i>python (spaCy, ntlk, pandas, pytorch, sklearn, numpy),
+          google colab, html, css, javascript, jQuery</i>
+    </p>
+    <p>
       I am currently working with Dr. Lisa Pearl with the help of Dr. Richard Futrell on a project
       where we try to detect if a document is an imitation. For example, suppose we have a document X
       written by author A. If we are given a document Y which some author B wrote that imitates
@@ -117,7 +117,7 @@
       We use a variety of NLP techniques to accomplish this task and the quality
       of each method is captured using precision, recall, and accuracy. We are also
       using a dataset provided by Dr. Pearl's former student although we are in the
-      process of getting more data from Amazon MTurk. Thus, the results are based
+      process of getting more data from Amazon MTurk. Thus, the current results are based
       on very little data. Without going into too much detail, here are some of the
       approaches we have used (click the colored text for code):
       <ul>
@@ -158,6 +158,25 @@
         </li>
       </ul>
     </p>
+    <p>
+      <i>paper in progress</i>
+    </p>
+    <hr>
+    <p>
+        <a target="_blank" style="color:#8DA290">
+          Learning and Decision Neuroscience Lab
+        </a>
+      </p>
+      <p>
+          <i>matlab, python, r</i>
+      </p>
+      <p>
+        Still learning the ropes here but currently working on verifying MATLAB code written by 
+        a graduate student who already graduated. This involves two models, one 
+        based on reinforcement learning and one based on probabilistic graphical models, 
+        that model behavior on different schedules of reinforcement. I am focusing on
+        verifying these models and potentially rebuilding them if needed. 
+      </p>
   </div>
 
   <div id="web dev+design" class="page hide">
